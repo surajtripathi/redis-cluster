@@ -1,0 +1,6 @@
+node_modules
+*.log
+*.rb
+*.aof
+*.rdb
+nodes.conf

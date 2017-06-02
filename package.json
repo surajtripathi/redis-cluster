@@ -1,0 +1,14 @@
+{
+  "name": "redis_cluster",
+  "version": "1.0.0",
+  "description": "redis redis clustor poc",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Suraj Tripathi",
+  "license": "ISC",
+  "dependencies": {
+    "ioredis": "^3.1.0"
+  }
+}
