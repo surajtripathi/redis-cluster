@@ -1,5 +1,5 @@
 # Creating Redis cluster with 3 master and 3 slave configuration
-### Minimal configuration for each cluster node, just port number will change for each node.
+### Following is the minimal configuration for each cluster node, just port number will change for each node.
 we are going to use ports from 7000 to 7005.
 ```
 port 7000
@@ -9,7 +9,7 @@ cluster-node-timeout 5000
 appendonly yes
 ```
 
-1. ## Creating 6 node servers
+## STEP#1. Creating 6 redis servers and running them on different ports
 	**Create following folder structure**
 	```
 	mkdir cluster-test
@@ -74,7 +74,7 @@ appendonly yes
 
 	Now all 6 redis servers are running.
 
-## 1. Creating the cluster
+## STEP#2. Creating the cluster
 
 ### To create cluster, we will use **redis-trib** utility
 	1. which is you can download from **[here](https://github.com/antirez/redis/blob/unstable/src/redis-trib.rb)**
@@ -85,7 +85,7 @@ appendonly yes
 		`./redis-trib.rb create --replicas 1 127.0.0.1:7000 127.0.0.1:7001 127.0.0.1:7002 127.0.0.1:7003 127.0.0.1:7004 127.0.0.1:7005`
 
 
-Following is the node snippet to connect to clustor
+Following is the node snippet to connect to cluster
 
 ```javascript
 const Cluster = require("ioredis").Cluster;
